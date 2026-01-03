@@ -1,0 +1,14 @@
+[
+  {
+    "name": "JDBC – Day 1",
+    "file": "jdbc_day1.json"
+  },
+  {
+    "name": "JDBC – Day 2",
+    "file": "jdbc_day2.json"
+  },
+  {
+    "name": "Hibernate Basics",
+    "file": "hibernate.json"
+  }
+]
