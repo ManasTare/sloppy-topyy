@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MCQ Flashcard App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 15px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: #1e1e1e;
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    }
+
+    h2 { text-align: center; margin-bottom: 12px; }
+
+    .option {
+      background: #2a2a2a;
+      padding: 14px;
+      margin: 8px 0;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .option:hover { background: #3a3a3a; }
+    .correct { background: #2e7d32 !important; }
+    .wrong { background: #c62828 !important; }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    button {
+      flex: 1;
+      padding: 14px;
+      background: #2979ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .skip-btn { background: #555; }
+  </style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2 id="deckTitle">Loading…</h2>
+  <div id="questionBox"></div>
+  <div id="optionsBox"></div>
+
+  <div class="actions">
+    <button class="skip-btn" onclick="skipQuestion()">Skip</button>
+    <button onclick="nextQuestion()">Next</button>
+  </div>
+</div>
+
+<script>
+  let mcqs = [];
+  let current = 0;
+  let answered = false;
+  const AUTO_NEXT_DELAY = 1000;
+
+  // ✅ AUTO LOAD JSON
+  fetch("Day1_JDBC_60_MCQs.json")
+    .then(res => res.json())
+    .then(data => {
+      mcqs = data.mcqs;
+      document.getElementById("deckTitle").innerText = data.deck;
+      loadQuestion();
+    })
+    .catch(err => {
+      document.getElementById("deckTitle").innerText = "Failed to load JSON";
+      console.error(err);
+    });
+
+  function loadQuestion() {
+    answered = false;
+    const q = mcqs[current];
+
+    document.getElementById("questionBox").innerHTML =
+      "<h3>" + q.question + "</h3>";
+
+    const optionsDiv = document.getElementById("optionsBox");
+    optionsDiv.innerHTML = "";
+
+    q.options.forEach((opt, index) => {
+      const div = document.createElement("div");
+      div.className = "option";
+      div.innerText = opt;
+      div.onclick = () => handleAnswer(index, div);
+      optionsDiv.appendChild(div);
+    });
+  }
+
+  function handleAnswer(selectedIndex, selectedDiv) {
+    if (answered) return;
+    answered = true;
+
+    const q = mcqs[current];
+    const options = document.querySelectorAll(".option");
+
+    options.forEach((opt, i) => {
+      if (i === q.correct) opt.classList.add("correct");
+    });
+
+    if (selectedIndex !== q.correct) {
+      selectedDiv.classList.add("wrong");
+    }
+
+    setTimeout(goNext, AUTO_NEXT_DELAY);
+  }
+
+  function nextQuestion() {
+    if (!answered) return alert("Answer first");
+    goNext();
+  }
+
+  function skipQuestion() {
+    goNext();
+  }
+
+  function goNext() {
+    if (current < mcqs.length - 1) {
+      current++;
+      loadQuestion();
+    } else {
+      alert("Deck completed");
+    }
+  }
+</script>
+
+</body>
+</html>
