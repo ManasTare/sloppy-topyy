@@ -80,9 +80,8 @@
   let mcqs = [];
   let current = 0;
   let answered = false;
-  const AUTO_NEXT_DELAY = 1000;
 
-  // ✅ AUTO LOAD JSON
+  // Auto-load JSON (same folder)
   fetch("Day1_JDBC_60_MCQs.json")
     .then(res => res.json())
     .then(data => {
@@ -128,12 +127,13 @@
     if (selectedIndex !== q.correct) {
       selectedDiv.classList.add("wrong");
     }
-
-    setTimeout(goNext, AUTO_NEXT_DELAY);
   }
 
   function nextQuestion() {
-    if (!answered) return alert("Answer first");
+    if (!answered) {
+      alert("Answer the question first");
+      return;
+    }
     goNext();
   }
 
@@ -150,6 +150,7 @@
     }
   }
 </script>
+
 
 </body>
 </html>
