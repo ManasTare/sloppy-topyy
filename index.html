@@ -29,7 +29,27 @@
       box-shadow: 0 0 15px rgba(0,0,0,0.6);
     }
 
-    h2 { text-align: center; margin-bottom: 12px; }
+    h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      background: #2a2a2a;
+      color: #eee;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    #questionBox h3 {
+      font-size: 1.05rem;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
 
     .option {
       background: #2a2a2a;
@@ -39,7 +59,10 @@
       cursor: pointer;
     }
 
-    .option:hover { background: #3a3a3a; }
+    .option:hover {
+      background: #3a3a3a;
+    }
+
     .correct { background: #2e7d32 !important; }
     .wrong { background: #c62828 !important; }
 
@@ -57,16 +80,25 @@
       border: none;
       border-radius: 8px;
       font-size: 1rem;
+      cursor: pointer;
     }
 
-    .skip-btn { background: #555; }
+    .skip-btn {
+      background: #555;
+    }
   </style>
 </head>
 
 <body>
 
 <div class="card">
-  <h2 id="deckTitle">Loading…</h2>
+  <h2 id="deckTitle">Select Deck</h2>
+
+  <!-- ✅ Deck selector -->
+  <select id="deckSelect" onchange="loadSelectedDeck()">
+    <option value="">-- Choose a deck --</option>
+  </select>
+
   <div id="questionBox"></div>
   <div id="optionsBox"></div>
 
@@ -81,18 +113,37 @@
   let current = 0;
   let answered = false;
 
-  // Auto-load JSON (same folder)
-  fetch("Day1_JDBC_60_MCQs.json")
+  // ✅ Load manifest
+  fetch("decks.json")
     .then(res => res.json())
-    .then(data => {
-      mcqs = data.mcqs;
-      document.getElementById("deckTitle").innerText = data.deck;
-      loadQuestion();
+    .then(decks => {
+      const select = document.getElementById("deckSelect");
+      decks.forEach(d => {
+        const opt = document.createElement("option");
+        opt.value = d.file;
+        opt.textContent = d.name;
+        select.appendChild(opt);
+      });
     })
     .catch(err => {
-      document.getElementById("deckTitle").innerText = "Failed to load JSON";
+      document.getElementById("deckTitle").innerText = "Failed to load decks";
       console.error(err);
     });
+
+  function loadSelectedDeck() {
+    const file = document.getElementById("deckSelect").value;
+    if (!file) return;
+
+    fetch(file)
+      .then(res => res.json())
+      .then(data => {
+        mcqs = data.mcqs;
+        current = 0;
+        answered = false;
+        document.getElementById("deckTitle").innerText = data.deck;
+        loadQuestion();
+      });
+  }
 
   function loadQuestion() {
     answered = false;
@@ -150,7 +201,6 @@
     }
   }
 </script>
-
 
 </body>
 </html>
