@@ -1,0 +1,665 @@
+{
+  "deck": "Day 1 \u2013 JDBC MCQs (60 Questions)",
+  "mcqs": [
+    {
+      "id": 1,
+      "question": "JDBC stands for:",
+      "options": [
+        "Java Data Connectivity",
+        "Java Database Connectivity",
+        "Java DB Connector",
+        "Java Driver Connector"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 2,
+      "question": "JDBC is used to connect Java applications with:",
+      "options": [
+        "Web server",
+        "Operating system",
+        "Database",
+        "Browser"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 3,
+      "question": "Which package contains JDBC classes?",
+      "options": [
+        "java.io",
+        "java.sql",
+        "javax.sql",
+        "java.util"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 4,
+      "question": "Which interface represents a DB connection?",
+      "options": [
+        "Driver",
+        "Statement",
+        "Connection",
+        "ResultSet"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 5,
+      "question": "Which method establishes DB connection?",
+      "options": [
+        "getConnection()",
+        "connect()",
+        "createConnection()",
+        "open()"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 6,
+      "question": "Which interface executes SQL queries?",
+      "options": [
+        "ResultSet",
+        "Connection",
+        "Statement",
+        "Driver"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 7,
+      "question": "Which JDBC object stores query result?",
+      "options": [
+        "Connection",
+        "Statement",
+        "ResultSet",
+        "Driver"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 8,
+      "question": "Which method executes SELECT query?",
+      "options": [
+        "executeUpdate()",
+        "execute()",
+        "executeQuery()",
+        "runQuery()"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 9,
+      "question": "Which method executes INSERT/UPDATE/DELETE?",
+      "options": [
+        "executeQuery()",
+        "executeUpdate()",
+        "execute()",
+        "run()"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 10,
+      "question": "Which JDBC driver type uses native API?",
+      "options": [
+        "Type 1",
+        "Type 2",
+        "Type 3",
+        "Type 4"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 11,
+      "question": "Which JDBC driver is pure Java?",
+      "options": [
+        "Type 1",
+        "Type 2",
+        "Type 3",
+        "Type 4"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 12,
+      "question": "Which exception is thrown in JDBC?",
+      "options": [
+        "IOException",
+        "SQLException",
+        "ClassNotFoundException",
+        "NullPointerException"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 13,
+      "question": "Which method closes DB connection?",
+      "options": [
+        "stop()",
+        "end()",
+        "close()",
+        "finish()"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 14,
+      "question": "Which interface improves performance for repeated queries?",
+      "options": [
+        "Statement",
+        "PreparedStatement",
+        "CallableStatement",
+        "Driver"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 15,
+      "question": "Which JDBC object calls stored procedures?",
+      "options": [
+        "Statement",
+        "PreparedStatement",
+        "CallableStatement",
+        "ResultSet"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 16,
+      "question": "Which method loads JDBC driver class?",
+      "options": [
+        "loadDriver()",
+        "Class.forName()",
+        "DriverManager.load()",
+        "new Driver()"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 17,
+      "question": "Which interface manages drivers?",
+      "options": [
+        "Connection",
+        "Driver",
+        "DriverManager",
+        "Statement"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 18,
+      "question": "Which ResultSet method moves cursor forward?",
+      "options": [
+        "previous()",
+        "next()",
+        "first()",
+        "last()"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 19,
+      "question": "Which JDBC API supports batch processing?",
+      "options": [
+        "Statement",
+        "PreparedStatement",
+        "Both A and B",
+        "Driver"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 20,
+      "question": "Which JDBC feature prevents SQL injection?",
+      "options": [
+        "Statement",
+        "PreparedStatement",
+        "DriverManager",
+        "ResultSet"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 21,
+      "question": "Which JDBC driver is recommended for production?",
+      "options": [
+        "Type 1",
+        "Type 2",
+        "Type 3",
+        "Type 4"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 22,
+      "question": "Which ResultSet type allows scrolling?",
+      "options": [
+        "TYPE_FORWARD_ONLY",
+        "TYPE_SCROLL_INSENSITIVE",
+        "TYPE_READ_ONLY",
+        "TYPE_UPDATABLE"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 23,
+      "question": "Which method commits transaction?",
+      "options": [
+        "commit()",
+        "save()",
+        "end()",
+        "close()"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 24,
+      "question": "Which method rolls back transaction?",
+      "options": [
+        "undo()",
+        "rollback()",
+        "revert()",
+        "cancel()"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 25,
+      "question": "Which JDBC method disables auto-commit?",
+      "options": [
+        "setCommit(false)",
+        "setAutoCommit(false)",
+        "disableCommit()",
+        "commit(false)"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 26,
+      "question": "Which interface supports IN parameters?",
+      "options": [
+        "Statement",
+        "PreparedStatement",
+        "CallableStatement",
+        "ResultSet"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 27,
+      "question": "Which method adds SQL to batch?",
+      "options": [
+        "add()",
+        "addQuery()",
+        "addBatch()",
+        "addSQL()"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 28,
+      "question": "Which method executes batch?",
+      "options": [
+        "executeBatch()",
+        "runBatch()",
+        "batchExecute()",
+        "execute()"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 29,
+      "question": "Which JDBC object is thread-safe?",
+      "options": [
+        "Connection",
+        "Statement",
+        "ResultSet",
+        "None"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 30,
+      "question": "Which method retrieves integer from ResultSet?",
+      "options": [
+        "getInt()",
+        "getInteger()",
+        "readInt()",
+        "fetchInt()"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 31,
+      "question": "Which method sets String parameter in PreparedStatement?",
+      "options": [
+        "setChar()",
+        "setText()",
+        "setString()",
+        "putString()"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 32,
+      "question": "Which JDBC feature groups multiple updates?",
+      "options": [
+        "Transactions",
+        "Batch processing",
+        "ResultSet",
+        "Driver loading"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 33,
+      "question": "Which ResultSet mode allows updates?",
+      "options": [
+        "READ_ONLY",
+        "UPDATABLE",
+        "FORWARD_ONLY",
+        "STATIC"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 34,
+      "question": "Which method retrieves column by name?",
+      "options": [
+        "getValue()",
+        "getColumn()",
+        "getString(\"col\")",
+        "read()"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 35,
+      "question": "Which JDBC feature ensures data consistency?",
+      "options": [
+        "Batch",
+        "Transactions",
+        "Driver",
+        "ResultSet"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 36,
+      "question": "Which method enables auto-commit?",
+      "options": [
+        "setAutoCommit(true)",
+        "enableCommit()",
+        "commit(true)",
+        "autoCommit()"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 37,
+      "question": "Which class handles DB URL parsing?",
+      "options": [
+        "Connection",
+        "Driver",
+        "DriverManager",
+        "Statement"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 38,
+      "question": "Which SQL exception contains vendor error code?",
+      "options": [
+        "IOException",
+        "RuntimeException",
+        "SQLException",
+        "ClassNotFoundException"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 39,
+      "question": "Which JDBC feature improves performance?",
+      "options": [
+        "PreparedStatement",
+        "Statement",
+        "ResultSet",
+        "DriverManager"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 40,
+      "question": "Which call closes ResultSet automatically?",
+      "options": [
+        "rs.close()",
+        "stmt.close()",
+        "conn.close()",
+        "All of the above"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 41,
+      "question": "Which JDBC driver bypasses middleware?",
+      "options": [
+        "Type 1",
+        "Type 2",
+        "Type 3",
+        "Type 4"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 42,
+      "question": "Which is TRUE about PreparedStatement?",
+      "options": [
+        "Slower than Statement",
+        "Vulnerable to SQL injection",
+        "Precompiled by DB",
+        "Cannot accept parameters"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 43,
+      "question": "Which ResultSet concurrency allows updates?",
+      "options": [
+        "CONCUR_READ_ONLY",
+        "CONCUR_UPDATABLE",
+        "CONCUR_FORWARD_ONLY",
+        "CONCUR_STATIC"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 44,
+      "question": "Which method retrieves generated keys?",
+      "options": [
+        "getKeys()",
+        "getGeneratedKeys()",
+        "fetchKeys()",
+        "readKeys()"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 45,
+      "question": "Which JDBC concept ensures atomicity?",
+      "options": [
+        "Batch",
+        "Auto-commit",
+        "Transaction",
+        "Driver"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 46,
+      "question": "Which JDBC object should be closed first?",
+      "options": [
+        "Connection",
+        "Statement",
+        "ResultSet",
+        "DriverManager"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 47,
+      "question": "Which isolation level prevents dirty reads?",
+      "options": [
+        "READ_UNCOMMITTED",
+        "READ_COMMITTED",
+        "REPEATABLE_READ",
+        "SERIALIZABLE"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 48,
+      "question": "Which JDBC feature groups SQL statements logically?",
+      "options": [
+        "Batch",
+        "ResultSet",
+        "Transaction",
+        "Driver"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 49,
+      "question": "Which call disables auto-commit by default?",
+      "options": [
+        "conn.setAutoCommit(false)",
+        "conn.commit()",
+        "conn.rollback()",
+        "stmt.execute()"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 50,
+      "question": "Which is best practice in JDBC?",
+      "options": [
+        "Ignore exceptions",
+        "Use Statement always",
+        "Close resources in finally",
+        "Hard-code credentials"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 51,
+      "question": "Which JDBC object is NOT reusable?",
+      "options": [
+        "Connection",
+        "PreparedStatement",
+        "Statement",
+        "ResultSet"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 52,
+      "question": "Which interface supports OUT parameters?",
+      "options": [
+        "Statement",
+        "PreparedStatement",
+        "CallableStatement",
+        "ResultSet"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 53,
+      "question": "Which JDBC method checks auto-commit mode?",
+      "options": [
+        "isCommit()",
+        "getCommit()",
+        "getAutoCommit()",
+        "checkCommit()"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 54,
+      "question": "Which ResultSet cursor starts before first row?",
+      "options": [
+        "At first row",
+        "At last row",
+        "Before first row",
+        "After last row"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 55,
+      "question": "Which JDBC feature reduces network calls?",
+      "options": [
+        "Batch processing",
+        "Auto-commit",
+        "ResultSet",
+        "DriverManager"
+      ],
+      "correct": 0
+    },
+    {
+      "id": 56,
+      "question": "Which SQL type maps to Java String?",
+      "options": [
+        "INT",
+        "VARCHAR",
+        "FLOAT",
+        "DATE"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 57,
+      "question": "Which JDBC method throws SQLException?",
+      "options": [
+        "toString()",
+        "close()",
+        "hashCode()",
+        "equals()"
+      ],
+      "correct": 1
+    },
+    {
+      "id": 58,
+      "question": "Which JDBC feature supports rollback on failure?",
+      "options": [
+        "Batch only",
+        "Auto-commit",
+        "Transaction",
+        "Driver loading"
+      ],
+      "correct": 2
+    },
+    {
+      "id": 59,
+      "question": "Which driver type is fastest?",
+      "options": [
+        "Type 1",
+        "Type 2",
+        "Type 3",
+        "Type 4"
+      ],
+      "correct": 3
+    },
+    {
+      "id": 60,
+      "question": "Which JDBC principle improves security?",
+      "options": [
+        "Hard-coded SQL",
+        "PreparedStatement",
+        "Auto-commit",
+        "Scrollable ResultSet"
+      ],
+      "correct": 1
+    }
+  ]
+}
