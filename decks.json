@@ -10,5 +10,21 @@
   {
     "name": "Hibernate Basics",
     "file": "hibernate.json"
+  },
+  {
+    "name": "Day 12 – Spring Transactions & ORM",
+    "file": "Day12_Jakarta_EE_MCQs.json"
+  },
+  {
+    "name": "Day 13 – Spring Core & Annotations",
+    "file": "Day13_Jakarta_EE_MCQs.json"
+  },
+  {
+    "name": "Day 14 – Spring MVC",
+    "file": "Day14_Jakarta_EE_MCQs.json"
+  },
+  {
+    "name": "Day 15 – Spring REST",
+    "file": "Day15_Jakarta_EE_MCQs.json"
   }
 ]

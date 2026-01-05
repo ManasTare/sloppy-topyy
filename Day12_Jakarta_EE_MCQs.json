@@ -1,0 +1,75 @@
+{
+  "deck": "Day 12 – Spring Transaction Management & Spring ORM",
+  "mcqs": [
+    { "id": 1, "question": "A transaction is a unit of work that is:", "options": ["Optional", "Atomic", "Parallel", "Independent"], "correct": 1 },
+    { "id": 2, "question": "Which problem occurs without transactions?", "options": ["Faster execution", "Data inconsistency", "Better scalability", "Less memory usage"], "correct": 1 },
+    { "id": 3, "question": "Spring manages transactions using:", "options": ["JDBC only", "Declarative approach", "Manual SQL", "JSP"], "correct": 1 },
+    { "id": 4, "question": "Declarative transactions in Spring are defined using:", "options": ["Java main method", "XML configuration", "HTML file", "SQL script"], "correct": 1 },
+    { "id": 5, "question": "Which tag enables transaction support?", "options": ["Option A", "Option B", "Correct transaction tag", "Option D"], "correct": 2 },
+    { "id": 6, "question": "Spring ORM integrates Spring with:", "options": ["JDBC only", "Hibernate", "JSP", "Servlet"], "correct": 1 },
+    { "id": 7, "question": "Which class integrates Hibernate SessionFactory with Spring?", "options": ["HibernateTemplate", "LocalSessionFactoryBean", "JdbcTemplate", "DataSource"], "correct": 1 },
+    { "id": 8, "question": "HibernateTemplate is used to:", "options": ["Configure AOP", "Simplify Hibernate DAO code", "Create entities", "Manage JSP"], "correct": 1 },
+    { "id": 9, "question": "Which layer should be transactional?", "options": ["View", "Controller", "Service", "JSP"], "correct": 2 },
+    { "id": 10, "question": "Transaction rollback happens when:", "options": ["Method succeeds", "Exception occurs", "Application starts", "Bean loads"], "correct": 1 },
+
+    { "id": 11, "question": "Which file defines Spring beans here?", "options": ["web.xml", "applicationContext.xml", "pom.xml", "hibernate.cfg.xml"], "correct": 1 },
+    { "id": 12, "question": "Which component manages DB connections in Spring ORM?", "options": ["DAO", "DataSource", "Service", "JSP"], "correct": 1 },
+    { "id": 13, "question": "Transaction management improves:", "options": ["UI design", "Data consistency", "HTML rendering", "CSS styling"], "correct": 1 },
+    { "id": 14, "question": "Which template simplifies Hibernate operations?", "options": ["JdbcTemplate", "HibernateTemplate", "SimpleJdbcInsert", "NamedParameterJdbcTemplate"], "correct": 1 },
+    { "id": 15, "question": "Declarative transactions separate:", "options": ["UI and logic", "Transaction logic from business logic", "DAO and service", "SQL and Java"], "correct": 1 },
+
+    { "id": 16, "question": "Which is NOT a transaction property here?", "options": ["Propagation", "Isolation (advanced)", "Rollback rules", "Scope"], "correct": 3 },
+    { "id": 17, "question": "Spring ORM belongs to which layer?", "options": ["Presentation", "Persistence", "UI", "JSP"], "correct": 1 },
+    { "id": 18, "question": "Which avoids partial database updates?", "options": ["Caching", "Transactions", "HQL", "Criteria API"], "correct": 1 },
+    { "id": 19, "question": "Which is a DAO responsibility?", "options": ["UI rendering", "Business rules", "Data access", "Logging"], "correct": 2 },
+    { "id": 20, "question": "Which improves enterprise reliability?", "options": ["Scriptlets", "Transactions", "Inline SQL", "Hard coding"], "correct": 1 },
+
+    { "id": 21, "question": "Which XML element defines transactional methods?", "options": ["Option A", "Transaction advice element", "Option C", "Option D"], "correct": 1 },
+    { "id": 22, "question": "Which class manages Hibernate sessions in Spring ORM?", "options": ["Session", "SessionFactory", "HibernateTemplate", "LocalSessionFactoryBean"], "correct": 2 },
+    { "id": 23, "question": "Which layer coordinates DAO operations?", "options": ["DAO", "Service", "Controller", "JSP"], "correct": 1 },
+    { "id": 24, "question": "Which transaction style is recommended?", "options": ["Programmatic everywhere", "Declarative", "Manual JDBC", "No transactions"], "correct": 1 },
+    { "id": 25, "question": "Which configuration links Spring and Hibernate?", "options": ["hibernate.cfg.xml", "web.xml", "applicationContext.xml", "pom.xml"], "correct": 2 },
+
+    { "id": 26, "question": "Which transaction behavior ensures all-or-nothing?", "options": ["Propagation", "Atomicity", "Consistency", "Isolation"], "correct": 1 },
+    { "id": 27, "question": "Which bean manages transactions in Spring?", "options": ["DataSource", "TransactionManager", "SessionFactory", "DAO"], "correct": 1 },
+    { "id": 28, "question": "Which Spring feature handles rollback automatically?", "options": ["AOP", "MVC", "JDBC", "JSP"], "correct": 0 },
+    { "id": 29, "question": "Which class simplifies exception handling in ORM?", "options": ["HibernateTemplate", "Session", "EntityManager", "Statement"], "correct": 0 },
+    { "id": 30, "question": "Which improves maintainability most?", "options": ["Inline transactions", "Declarative transactions", "Hard coding", "Scriptlets"], "correct": 1 },
+
+    { "id": 31, "question": "Which layer should NOT manage transactions directly?", "options": ["DAO", "Service", "Business layer", "UI"], "correct": 3 },
+    { "id": 32, "question": "Which configuration enables AOP-based transactions?", "options": ["Option A", "Option B", "Both A and B", "Option D"], "correct": 2 },
+    { "id": 33, "question": "Which Spring ORM benefit improves portability?", "options": ["DB-specific SQL", "ORM abstraction", "Inline JDBC", "Stored procedures"], "correct": 1 },
+    { "id": 34, "question": "Which ensures multiple DAO calls use same transaction?", "options": ["DAO layer", "Service layer", "Controller", "JSP"], "correct": 1 },
+    { "id": 35, "question": "Which file contains transaction rules?", "options": ["pom.xml", "hibernate.cfg.xml", "applicationContext.xml", "web.xml"], "correct": 2 },
+
+    { "id": 36, "question": "Which transaction concept ensures DB integrity?", "options": ["Atomicity", "Consistency", "Both A and B", "Durability"], "correct": 2 },
+    { "id": 37, "question": "Which Spring ORM component wires DAO with Hibernate?", "options": ["DataSource", "HibernateTemplate", "LocalSessionFactoryBean", "JdbcTemplate"], "correct": 1 },
+    { "id": 38, "question": "Which avoids writing boilerplate Hibernate code?", "options": ["HibernateTemplate", "Session", "HQL", "Criteria API"], "correct": 0 },
+    { "id": 39, "question": "Which transaction style is XML-based here?", "options": ["Programmatic", "Declarative", "Manual", "Annotation-based"], "correct": 1 },
+    { "id": 40, "question": "Which Spring feature uses proxies for transactions?", "options": ["MVC", "AOP", "JDBC", "ORM"], "correct": 1 },
+
+    { "id": 41, "question": "Which misuse leads to partial commits?", "options": ["Declarative transactions", "Missing transaction management", "Spring ORM", "Service layer"], "correct": 1 },
+    { "id": 42, "question": "Why transactions are applied at service layer?", "options": ["UI convenience", "Business boundary definition", "DAO simplicity", "JSP limitation"], "correct": 1 },
+    { "id": 43, "question": "Which design improves scalability most?", "options": ["Inline JDBC", "Declarative transactions + ORM", "Scriptlets", "Hard-coded SQL"], "correct": 1 },
+    { "id": 44, "question": "Which transaction issue occurs without rollback rules?", "options": ["Faster commits", "Inconsistent data", "Better performance", "No effect"], "correct": 1 },
+    { "id": 45, "question": "Which Spring feature intercepts methods for transactions?", "options": ["MVC", "JDBC", "AOP", "ORM"], "correct": 2 },
+
+    { "id": 46, "question": "Which design avoids tight coupling between DAO and Hibernate?", "options": ["Session usage", "HibernateTemplate", "Direct SessionFactory", "Native SQL"], "correct": 1 },
+    { "id": 47, "question": "Which transaction concept ensures rollback on failure?", "options": ["Atomicity", "Durability", "Isolation", "Propagation"], "correct": 0 },
+    { "id": 48, "question": "Which Spring ORM feature simplifies testing?", "options": ["Hard-coded connections", "Template abstraction", "Inline SQL", "Scriptlets"], "correct": 1 },
+    { "id": 49, "question": "Which misuse breaks transaction consistency?", "options": ["Service-level transactions", "Multiple transactions per DAO call", "Declarative management", "Single transaction boundary"], "correct": 1 },
+    { "id": 50, "question": "Which approach supports clean architecture best?", "options": ["Transactions in DAO", "Transactions in Service layer", "Transactions in JSP", "No transactions"], "correct": 1 },
+
+    { "id": 51, "question": "Which Spring ORM issue occurs without proper configuration?", "options": ["Faster execution", "Session leak", "UI error", "HTML failure"], "correct": 1 },
+    { "id": 52, "question": "Which design helps reuse business logic safely?", "options": ["Scriptlets", "Declarative transactions", "Hard coding", "Inline JDBC"], "correct": 1 },
+    { "id": 53, "question": "Which transaction rule is safest by default?", "options": ["No rollback", "Rollback on RuntimeException", "Always commit", "Manual commit"], "correct": 1 },
+    { "id": 54, "question": "Which Spring ORM feature hides Hibernate complexity?", "options": ["SessionFactory", "HibernateTemplate", "Entity", "HQL"], "correct": 1 },
+    { "id": 55, "question": "Which design avoids duplicated transaction code?", "options": ["Programmatic transactions", "Declarative transactions", "Manual commits", "JDBC only"], "correct": 1 },
+
+    { "id": 56, "question": "Which layer ensures atomic business operations?", "options": ["DAO", "Service", "Controller", "JSP"], "correct": 1 },
+    { "id": 57, "question": "Which Spring feature ensures consistent rollback behavior?", "options": ["MVC", "AOP-based transactions", "JDBC", "JSP"], "correct": 1 },
+    { "id": 58, "question": "Which misuse leads to transaction propagation issues?", "options": ["Proper service boundaries", "Nested transactions mismanaged", "Declarative config", "ORM integration"], "correct": 1 },
+    { "id": 59, "question": "Which approach best supports enterprise consistency?", "options": ["Inline SQL", "Declarative transactions + ORM", "Scriptlets", "Hard-coded logic"], "correct": 1 },
+    { "id": 60, "question": "Which overall strategy is best for Spring-based apps?", "options": ["No transactions", "Manual commits", "Declarative transactions with ORM", "JDBC only"], "correct": 2 }
+  ]
+}
